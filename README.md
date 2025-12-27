@@ -103,3 +103,9 @@ Este proyecto de prueba demuestra la implementación de autenticación y autoriz
 La base de datos deberás de rellenarla. Hay endpoints para crear usuarios pero se puede rellenar manualmente. Los usuarios con el rol de "administrador" (ROLE_ADMIN) tendrán una opción más en el menú.
 
 ## Estado del Proyecto: Entregable 1 Completado.
+
+## Como ejecutar el proyecto
+1. Clonar el repositorio.
+2. Renombrar el archivo .env.template a .env.
+3. Editar el .env e introducir credenciales válidas de Google OAuth.
+4. Ejecutar docker-compose up -d

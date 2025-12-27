@@ -30,8 +30,8 @@ services:
       SPRING_DATASOURCE_USERNAME: ${DB_USER}
       SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
       # Aquí ponemos las claves de Google OAuth2S
-      GOOGLE_CLIENT_ID: ${GOOGLE_ID}
-      GOOGLE_CLIENT_SECRET: ${GOOGLE_SECRET}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
     ports:
       - "9000:9000" # Puerto correcto según tu archivo properties
     networks:
@@ -56,12 +56,12 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/agprueba?createDatabaseIfNotExist=true
       SPRING_DATASOURCE_USERNAME: ${DB_USER}
       SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
-      GOOGLE_CLIENT_ID: ${GOOGLE_ID}      
-      GOOGLE_CLIENT_SECRET: ${GOOGLE_SECRET}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}      
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
       SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: http://auth-server:9000
       SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI: http://auth-server:9000/oauth2/jwks
     ports:
-      - "8080:8080"
+      - "8081:8080"
     networks:
       - app-network
 
