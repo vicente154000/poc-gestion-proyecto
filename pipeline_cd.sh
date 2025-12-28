@@ -19,19 +19,19 @@ echo -e "${BLUE}========================================${NC}"
 
 # Paso 1: Limpieza
 # Usamos -E con sudo para que conserve las variables que acabamos de cargar
-echo -e "${GREEN}[Paso 1/3] Limpiando entorno anterior...${NC}"
+echo -e "${RED}[Paso 1/3] Limpiando entorno anterior...${NC}"
 sudo -E docker-compose down --remove-orphans
 
 # Paso 2: Construcción y Despliegue
-echo -e "${GREEN}[Paso 2/3] Construyendo y Desplegando Contenedores...${NC}"
+echo -e "${RED}[Paso 2/3] Construyendo y Desplegando Contenedores...${NC}"
 sudo -E docker-compose up -d --build
 
 # Paso 3: Verificación
-echo -e "${GREEN}[Paso 3/3] Verificando estado del despliegue...${NC}"
+echo -e "${RED}[Paso 3/3] Verificando estado del despliegue...${NC}"
 echo "Esperando 10 segundos a que arranque Spring Boot..."
 sleep 10
 sudo docker-compose ps
 
 echo -e "${BLUE}========================================${NC}"
-echo -e "${GREEN}   ¡DESPLIEGUE COMPLETADO!              ${NC}"
+echo -e "${RED}   ¡DESPLIEGUE COMPLETADO!              ${NC}"
 echo -e "${BLUE}========================================${NC}"

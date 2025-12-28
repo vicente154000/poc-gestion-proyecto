@@ -15,6 +15,9 @@ COPY --from=build /app/dist/*/ /usr/share/nginx/html
 # Configuración necesaria para que Angular maneje las rutas (evita errores 404 al recargar)
 RUN echo 'server { \
     listen 80; \
+    gzip on; \
+    gzip_types text/plain application/javascript text/css application/json; \
+    gzip_min_length 1000; \
     location / { \
         root /usr/share/nginx/html; \
         index index.html index.htm; \
