@@ -1,0 +1,25 @@
+version: 2
+updates:
+  # 1. Analizar Frontend (Angular - NPM)
+  - package-ecosystem: "npm"
+    directory: "/ag-prueba-front"
+    schedule:
+      interval: "weekly"
+
+  # 2. Analizar Auth Server (Java - Maven)
+  - package-ecosystem: "maven"
+    directory: "/authorization-server"
+    schedule:
+      interval: "weekly"
+
+  # 3. Analizar Resource Server (Java - Maven)
+  - package-ecosystem: "maven"
+    directory: "/resource-server"
+    schedule:
+      interval: "weekly"
+
+  # 4. Analizar Docker (Busca actualizaciones de imagenes base en Dockerfiles)
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
